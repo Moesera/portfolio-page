@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./components/layout/Layout";
+import Home from "./pages/home";
+import Templates from "./pages/templates";
+import RouteNotFound from "./pages/error";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-<h1>Hello world</h1>
-<p>I will setup routers to handle this page</p>
-<button onClick={setCount(count + 1)}>{count}</button>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="templates" element={<Templates />} />
+          <Route path="*" element={<RouteNotFound />} />
+        </Route>
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
