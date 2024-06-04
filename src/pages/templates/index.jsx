@@ -21,9 +21,10 @@ const Templates = () => {
         <ul>
           <li>Styled-components & basic setup</li>
           <li>React-router-dom</li>
-          <li>Redux/toolkit</li>
+          <li>Redux/toolkit (easy to switch for another option)</li>
           <li>Layout folder & file setup</li>
           <li>Basic folder setup</li>
+          <li>babel styled components plugin and config</li>
         </ul>
       </section>
       <section>
