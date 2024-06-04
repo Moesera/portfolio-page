@@ -19,11 +19,11 @@ const Templates = () => {
       </section>
       <section>
         <ul>
-          <li>Styled-components</li>
+          <li>Styled-components & basic setup</li>
           <li>React-router-dom</li>
           <li>Redux/toolkit</li>
-          <li>Sass</li>
           <li>Layout folder & file setup</li>
+          <li>Basic folder setup</li>
         </ul>
       </section>
       <section>

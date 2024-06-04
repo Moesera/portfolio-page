@@ -1,14 +1,14 @@
 import Nav from "../Nav";
 
-// import * as S from './styled-components/App.styles';
+import * as S from '../../../styled-components/App.styles';
 
 
 const Header = () => {
   return (
-<header>
+<S.Header>
   <span>Logo</span>
 <Nav />
-</header>
+</S.Header>
   )
 }
 

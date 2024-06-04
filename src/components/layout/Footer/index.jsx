@@ -1,13 +1,12 @@
-// import * as S from './styled-components/App.styles';
+import * as S from '../../../styled-components/App.styles';
 
 const Footer = () => {
   return (
-<footer>
-  <span>Logo</span>
+<S.Footer>
   <section>
     <p>Footer</p>
   </section>
-</footer>
+</S.Footer>
   )
 }
 
