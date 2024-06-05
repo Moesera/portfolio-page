@@ -1,10 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-/* Page size */
+/* General style */
 :root {
   background-color: #119821;
 };
+
+html {
+  --color-primary: papayawhip;
+  --color-secondary: #DBDE61;
+}
 
 * {
   box-sizing: border-box;
@@ -25,7 +30,7 @@ main, body {
   margin: 0;
 }
 
-/* General style */
+/* Common style */
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
