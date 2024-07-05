@@ -14,10 +14,6 @@ export const transitions = {
 page: 'transition: all 0.25s ease',
 };
 
-const transitionMixin = `
-  transition: all 0.25s ease;
-`;
-
 export const App = styled.div`
   display: flex;
   flex-direction: column;
