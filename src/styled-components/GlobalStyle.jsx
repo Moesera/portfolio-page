@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   background-color: ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
 };
 
-/* Variables */
+/* VARIABLES */
 html {
   /* Light theme */
   --color-primary-light: papayawhip;
@@ -35,14 +35,6 @@ html,
 #root,
 body {
   height: 100%;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
-main, body {
   margin: 0;
 }
 
