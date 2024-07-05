@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 // Default colors fallback
 export const defaultMode = {
-  primary: 'red',
-  secondary: 'green',
+  primary: 'black',
+  secondary: 'grey',
   title: 'yellow',
   subtitles: 'yellow',
+  icons: "yellow", 
 };
 
 // Page transition
@@ -30,16 +31,22 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.nav`
-  background: grey;
-  ul, Link {
-    color: white;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  ul {
+  display: flex;
+  gap: 1rem;
   }
 `;
 
 export const Link = styled(RouterLink)`
-  color: white;
+  font-weight: bold;
+  color: ${({theme}) => (theme ? theme.secondary : defaultMode.secondary)};
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Footer = styled.footer`
@@ -55,7 +62,7 @@ export const Logo = styled.span`
   text-transform: uppercase;
 `;
 
-// Wrappers
+// Wrappers:
 // .div.attrs<{ $justify, $align, $padding }>
 export const Wrapper = styled.div`
   display: flex;
@@ -64,18 +71,18 @@ export const Wrapper = styled.div`
   padding: ${props => props.$padding || ""};
 `;
 
+// Page styles
+export const Title = styled.h1`
+  color: ${({theme}) => (theme ? theme.title : defaultMode.title)};
+`;
+
+// STYLED COMPONENTS EXAMPLES
+
 /**
 * HOW TO CREATE A COMPONENT BASED ON AN EXCISTING BASE COMPONENT
-* Example:
 * // export const HeaderWrapper = styled(Wrapper)`
 * // justify-content: space-between;
 * // align-items: center;
 * // padding: 1rem 1rem;
 * // `;
 */
-
-// Page styles
-export const Title = styled.h1`
-  color: ${({theme}) => (theme ? theme.title : defaultMode.title)};
-`;
-

@@ -41,8 +41,10 @@ body {
 /* Common style */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+}
+
+h1 {
+  text-align: center;
 }
 
 main {
