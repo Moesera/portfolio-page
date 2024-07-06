@@ -3,9 +3,7 @@ import * as S from '../../../styled-components/App.styles';
 const Footer = () => {
   return (
 <S.Footer>
-  <section>
-    <p>Footer</p>
-  </section>
+  {/* <S.Logo>Footer</S.Logo> */}
 </S.Footer>
   )
 }
