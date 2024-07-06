@@ -1,39 +1,22 @@
 import { Link as RouterLink } from 'react-router-dom';
 import styled from "styled-components";
 
-// Default colors fallback
-export const defaultMode = {
-  primary: 'black',
-  secondary: 'grey',
-  title: 'yellow',
-  subtitles: 'yellow',
-  icons: "yellow", 
-};
+import * as v from "./variables";
 
-// Page transition
-export const transitions = {
-page: 'transition: all 0.25s ease',
-};
-
-// Screen size breakpoints
-export const screenSize = {
-dekstop: '1440px',
-tablet: '768px',
-mobile: '425px',
-};
+// const defaultTheme = v.defaultMode;
 
 // Application Main Structures
 export const App = styled.div`
   display: flex;
   flex-direction: column;
-  background: ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
-  color: ${({theme}) => (theme ? theme.title : defaultMode.title)};
-  ${transitions.page}
+  background: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
+  color: ${({theme}) => (theme ? theme.title : v.defaultMode.title)};
+  ${v.transitions.page}
 `;
 
 export const Header = styled.header`
-  background: ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
-  ${transitions.page}
+  background: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
+  ${v.transitions.page}
 `;
 
 export const Nav = styled.nav`
@@ -42,12 +25,15 @@ export const Nav = styled.nav`
   ul {
     display: flex;
     gap: 1rem;
+    li {
+      list-style: none;
+    }
   }
 `;
 
 export const Link = styled(RouterLink)`
   font-weight: bold;
-  color: ${({theme}) => (theme ? theme.secondary : defaultMode.secondary)};
+  color: ${({theme}) => (theme ? theme.secondary : v.defaultMode.secondary)};
   text-decoration: none;
 
   &:hover {
@@ -56,9 +42,9 @@ export const Link = styled(RouterLink)`
 `;
 
 export const Footer = styled.footer`
-  color: ${({theme}) => (theme ? theme.subtitles : defaultMode.subtitles)};
-  background: ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
-  ${transitions.page}
+  color: ${({theme}) => (theme ? theme.subtitles : v.defaultMode.subtitles)};
+  background: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
+  ${v.transitions.page}
 `;
 
 export const Logo = styled.span`
@@ -68,8 +54,13 @@ export const Logo = styled.span`
   text-transform: uppercase;
 `;
 
-// WRAPPERS
-// .div.attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+// COMPONENTS
+
+/**
+ * CUSTOM WRAPPER <div>
+ * A div with these available properties to adjust:
+ * attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+ */
 export const CustomWrapper = styled.div`
   display: flex;
   max-width: ${props => props.$maxWidth || ""};
@@ -80,7 +71,11 @@ export const CustomWrapper = styled.div`
   padding: ${props => props.$padding || ""};
 `;
 
-// .div.attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+/**
+ * CUSTOM CONTAINER <section>
+ * A section with these available properties to adjust:
+ * attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+ */
 export const CustomContainer = styled.section`
   display: flex;
   max-width: ${props => props.$maxWidth || ""};
@@ -93,7 +88,7 @@ export const CustomContainer = styled.section`
 
 // Page Content
 export const Title = styled.h1`
-  color: ${({theme}) => (theme ? theme.title : defaultMode.title)};
+  color: ${({theme}) => (theme ? theme.title : v.defaultMode.title)};
 `;
 
 // STYLED COMPONENTS EXAMPLES
