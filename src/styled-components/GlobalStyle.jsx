@@ -32,30 +32,34 @@ html {
 }
 
 html,
+body,
 #root,
-body {
-  height: 100%;
-  margin: 0;
+.App {
+    margin: 0;
+    height: 100%;
 }
 
-/* Common style */
+#root {
+display: grid;
+}
+
+/* Application Structure */
 body {
   font-family: Arial, sans-serif;
 }
 
-h1 {
-  text-align: center;
+main {
+  flex-grow: 1;
 }
 
-main {
-  margin: 0 auto;
-  // switch this out for something more modern 70% ish at big screen conditionaly render on small screen -> maybe svh and dvh <-
-  min-width: 70%;
-  // Maybe use grid instead ? 
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
+footer {
+  /* margin-bottom: auto; */
+}
+
+/* Page Content */
+
+h1 {
+  text-align: center;
 }
 
 `;
