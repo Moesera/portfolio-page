@@ -15,16 +15,18 @@ const GlobalStyle = createGlobalStyle`
 html {
   /* Light theme */
   --color-primary-light: papayawhip;
-  --color-secondary-light: #DBDE61;
+  --color-secondary-light: #BF4F74;
   --color-title-light: #333;
   --color-subtitles-light: black;
   --color-icons-light: black;
+  --color-button-light: papayawhip;
   /* Dark theme */
   --color-primary-dark: #333;
-  --color-secondary-dark: #DBDE61;
+  --color-secondary-dark: #BF4F74;
   --color-title-dark: #f8f8f8;
   --color-subtitles-dark: #f8f8f8;
   --color-icons-dark : #f8f8f8;
+  --color-button-dark: papayawhip;
   /* Other */
 }
 
@@ -44,20 +46,24 @@ body,
 display: grid;
 }
 
+/* 960 */
 /* Application Structure */
 body {
   font-family: Arial, sans-serif;
 }
 
 main {
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
   flex-grow: 1;
 }
 
+/* Footer  */
 footer {
-  /* margin-bottom: auto; */
+  background: #DBDE61 !important;
+  padding: 2rem 0;
+  /* background-color: ${({theme}) => (theme ? theme.secondary : v.defaultMode.secondary)}; */
+  text-align: center;
 }
-
 /* Page Content */
 
 h1 {
@@ -65,5 +71,7 @@ h1 {
 }
 
 `;
+
+
 
 export default GlobalStyle;
