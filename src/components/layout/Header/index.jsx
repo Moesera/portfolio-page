@@ -9,11 +9,11 @@ const Header = () => {
 
   return (
     <S.Header>
-      <S.Wrapper $margin="0 auto" $maxWidth="70%" $align="center" $justify="space-between" $padding="1rem 0rem">
+      <S.CustomWrapper $margin="0 auto" $maxWidth="70%" $align="center" $justify="space-between" $padding="1rem 0rem">
         <Nav />
         {/* Theme switch */}
         <button onClick={toggleTheme}>{mode}</button>
-      </S.Wrapper>
+      </S.CustomWrapper>
     </S.Header>
   );
 };
