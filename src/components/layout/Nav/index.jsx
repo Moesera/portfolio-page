@@ -5,10 +5,10 @@ const Nav = () => {
     <S.Nav>
       <S.Logo>Logo</S.Logo>
       <ul>
-        <S.Link>Portfolio</S.Link>
-        <S.Link>Projects</S.Link>
-        <S.Link>Hire me</S.Link>
-        <S.Link>Templates</S.Link>
+        <S.Link to="/">Portfolio</S.Link>
+        <S.Link to="projects">Projects</S.Link>
+        <S.Link to="about">Hire me</S.Link>
+        <S.Link to="templates">Templates</S.Link>
       </ul>
     </S.Nav>
   )
