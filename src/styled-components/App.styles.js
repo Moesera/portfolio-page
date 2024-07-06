@@ -20,11 +20,13 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   ul {
     display: flex;
     gap: 1rem;
+    padding: 0;
     li {
       list-style: none;
     }
@@ -59,10 +61,11 @@ export const Logo = styled.span`
 /**
  * CUSTOM WRAPPER <div>
  * A div with these available properties to adjust:
- * attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+ * attrs<{$displayType, $flexFlow, $maxWidth, $margin, $direction, $justify, $align, $padding }>
  */
 export const CustomWrapper = styled.div`
-  display: flex;
+  display: ${props => props.$displayType || ""};
+  flex-flow: ${props => props.$flexFlow || ""};
   max-width: ${props => props.$maxWidth || ""};
   margin: ${props => props.$margin || ""};
   justify-content: ${props => props.$justify || ""};
