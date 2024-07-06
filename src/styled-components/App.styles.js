@@ -22,16 +22,15 @@ tablet: '768px',
 mobile: '425px',
 };
 
+// Application Main Structures
 export const App = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   background: ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
   color: ${({theme}) => (theme ? theme.title : defaultMode.title)};
   ${transitions.page}
 `;
 
-// Main page
 export const Header = styled.header`
   background: ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
   ${transitions.page}
@@ -41,8 +40,8 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   ul {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
   }
 `;
 
@@ -69,18 +68,30 @@ export const Logo = styled.span`
   text-transform: uppercase;
 `;
 
-// Wrappers:
-// .div.attrs<{ $maxWidth, $margin $justify, $align, $padding }>
-export const Wrapper = styled.div`
+// WRAPPERS
+// .div.attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+export const CustomWrapper = styled.div`
   display: flex;
   max-width: ${props => props.$maxWidth || ""};
   margin: ${props => props.$margin || ""};
+  justify-content: ${props => props.$justify || ""};
+  flex-direction: ${props => props.$direction || ""};
+  align-items: ${props => props.$align || ""};
+  padding: ${props => props.$padding || ""};
+`;
+
+// .div.attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+export const CustomContainer = styled.section`
+  display: flex;
+  max-width: ${props => props.$maxWidth || ""};
+  margin: ${props => props.$margin || ""};
+  flex-direction: ${props => props.$direction || ""};
   justify-content: ${props => props.$justify || ""};
   align-items: ${props => props.$align || ""};
   padding: ${props => props.$padding || ""};
 `;
 
-// Page styles
+// Page Content
 export const Title = styled.h1`
   color: ${({theme}) => (theme ? theme.title : defaultMode.title)};
 `;

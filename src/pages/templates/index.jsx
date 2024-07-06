@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import * as S from "../../styled-components/App.styles";
+
 const Templates = () => {
   const [count, setCount] = useState(0);
 
@@ -14,10 +16,8 @@ const Templates = () => {
   return (
     <>
       <h1>Basic starter template</h1>
-      <section>
+      <S.CustomContainer $direction="column">
         <h2>Template Includes:</h2>
-      </section>
-      <section>
         <ul>
           <li>Styled-components & basic setup</li>
           <li>React-router-dom</li>
@@ -26,14 +26,14 @@ const Templates = () => {
           <li>Basic folder setup</li>
           <li>babel styled components plugin and config</li>
         </ul>
-      </section>
-      <section>
+      </S.CustomContainer>
+      <S.CustomContainer>
         <h2>Basic useSatet example:</h2>
         <button onClick={() => counter("count")}>
           Counter is currently {count}
         </button>
         <button onClick={() => counter("clear")}>Clear Count</button>
-      </section>
+      </S.CustomContainer>
     </>
   );
 };
