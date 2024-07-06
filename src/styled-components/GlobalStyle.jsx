@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { defaultMode } from "./App.styles";
+
+import * as v from "./variables";
 
 // Setting theme colors on GlobalStyle ->
 // ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
@@ -7,7 +8,7 @@ import { defaultMode } from "./App.styles";
 const GlobalStyle = createGlobalStyle`
 /* General style */
 :root {
-  background-color: ${({theme}) => (theme ? theme.primary : defaultMode.primary)};
+  background-color: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
 };
 
 /* VARIABLES */
@@ -49,6 +50,7 @@ body {
 }
 
 main {
+  background-color: cadetblue;
   flex-grow: 1;
 }
 
