@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <S.Header>
-      <S.Wrapper $align="center" $justify="space-between" $padding="1rem">
+      <S.Wrapper $margin="0 auto" $maxWidth="70%" $align="center" $justify="space-between" $padding="1rem 0rem">
         <Nav />
         {/* Theme switch */}
         <button onClick={toggleTheme}>{mode}</button>

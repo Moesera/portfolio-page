@@ -48,7 +48,14 @@ h1 {
 }
 
 main {
-flex: 1;
+  margin: 0 auto;
+  // switch this out for something more modern 70% ish at big screen conditionaly render on small screen -> maybe svh and dvh <-
+  min-width: 70%;
+  // Maybe use grid instead ? 
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
 }
 
 `;

@@ -15,6 +15,13 @@ export const transitions = {
 page: 'transition: all 0.25s ease',
 };
 
+// Screen size breakpoints
+export const screenSize = {
+dekstop: '1440px',
+tablet: '768px',
+mobile: '425px',
+};
+
 export const App = styled.div`
   display: flex;
   flex-direction: column;
@@ -63,9 +70,11 @@ export const Logo = styled.span`
 `;
 
 // Wrappers:
-// .div.attrs<{ $justify, $align, $padding }>
+// .div.attrs<{ $maxWidth, $margin $justify, $align, $padding }>
 export const Wrapper = styled.div`
   display: flex;
+  max-width: ${props => props.$maxWidth || ""};
+  margin: ${props => props.$margin || ""};
   justify-content: ${props => props.$justify || ""};
   align-items: ${props => props.$align || ""};
   padding: ${props => props.$padding || ""};
