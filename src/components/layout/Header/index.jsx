@@ -9,10 +9,12 @@ const Header = () => {
 
   return (
     <S.Header>
-      <S.CustomWrapper $margin="0 auto" $maxWidth="70%" $align="center" $justify="space-between" $padding="1rem 0rem">
-        <Nav />
-        {/* Theme switch */}
+      {/* Theme switch */}
+      <S.CustomWrapper $displayType="flex" $padding="0.5rem 1rem" $justify="flex-end">
         <button onClick={toggleTheme}>{mode}</button>
+      </S.CustomWrapper >
+      <S.CustomWrapper $padding="0.5rem 0rem">
+        <Nav />
       </S.CustomWrapper>
     </S.Header>
   );

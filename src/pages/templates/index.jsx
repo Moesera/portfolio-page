@@ -28,7 +28,7 @@ const Templates = () => {
         </ul>
       </S.CustomContainer>
       <S.CustomContainer $margin="0 auto" $maxWidth="70%">
-        <h2>Basic useSatet example:</h2>
+        <h2>Basic useState example:</h2>
         <button onClick={() => counter("count")}>
           Counter is currently {count}
         </button>
