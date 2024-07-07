@@ -22,10 +22,11 @@ export const Header = styled.header`
 export const Nav = styled.nav`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
   ul {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.7rem;
     padding: 0;
     li {
       list-style: none;
@@ -34,9 +35,13 @@ export const Nav = styled.nav`
 `;
 
 export const Link = styled(RouterLink)`
-  font-weight: bold;
-  color: ${({theme}) => (theme ? theme.secondary : v.defaultMode.secondary)};
   text-decoration: none;
+  font-weight: bold;
+  padding: 0.2rem 0.3rem;
+  border: 0.2rem solid transparent;
+  border-radius: 0.2rem;
+  color: ${({theme}) => (theme ? theme.subtitles : v.defaultMode.subtitles)};
+  background: ${({theme}) => (theme ? theme.secondary : v.defaultMode.secondary)};
 
   &:hover {
     text-decoration: underline;
