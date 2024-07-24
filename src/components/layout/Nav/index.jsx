@@ -3,7 +3,6 @@ import * as S from '../../../styled-components/App.styles';
 const Nav = () => {
   return (
     <S.Nav>
-      <S.Logo>Logo</S.Logo>
       <ul>
         <li>
         <S.Link to="/">Portfolio</S.Link>
