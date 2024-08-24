@@ -50,7 +50,7 @@ export const Link = styled(RouterLink)`
 
 export const Footer = styled.footer`
   color: ${({theme}) => (theme ? theme.subtitles : v.defaultMode.subtitles)};
-  background: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
+  /* background: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)}; */
   ${v.transitions.page}
 `;
 

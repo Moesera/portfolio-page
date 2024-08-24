@@ -7,9 +7,9 @@ import * as v from "./variables";
 
 const GlobalStyle = createGlobalStyle`
 /* General style */
-:root {
+/* :root {
   background-color: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
-};
+}; */
 
 /* VARIABLES */
 html {
@@ -46,26 +46,23 @@ body,
 display: grid;
 }
 
-/* 960 */
 /* Application Structure */
 body {
   font-family: Arial, sans-serif;
 }
 
 main {
-  /* background-color: cadetblue; */
   flex-grow: 1;
 }
 
 /* Footer  */
 footer {
-  background: #DBDE61 !important;
   padding: 2rem 0;
-  /* background-color: ${({theme}) => (theme ? theme.secondary : v.defaultMode.secondary)}; */
+  /* background-color: ${({theme}) => (theme ? theme.primary : v.defaultMode.secondary)}; */
   text-align: center;
 }
-/* Page Content */
 
+/* Page Content */
 h1 {
   text-align: center;
 }
