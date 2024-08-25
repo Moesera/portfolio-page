@@ -11,7 +11,7 @@ const Nav = () => {
         <S.Link to="projects">Projects</S.Link>
         </li>
         <li>
-        <S.Link to="about">Hire me</S.Link>
+        <S.Link to="hire">Hire me</S.Link>
         </li>
         <li>
         <S.Link to="templates">Templates</S.Link>

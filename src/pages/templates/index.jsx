@@ -15,24 +15,13 @@ const Templates = () => {
 
   return (
     <>
-      <h1>Basic starter template</h1>
+      <h1>My templates</h1>
       <S.CustomContainer $direction="column" $margin="0 auto" $maxWidth="70%">
-        <h2>Template Includes:</h2>
-        <ul>
-          <li>Styled-components & basic setup</li>
-          <li>React-router-dom</li>
-          <li>Redux/toolkit (easy to switch for another option)</li>
-          <li>Layout folder & file setup</li>
-          <li>Basic folder setup</li>
-          <li>babel styled components plugin and config</li>
-        </ul>
-      </S.CustomContainer>
-      <S.CustomContainer $margin="0 auto" $maxWidth="70%">
-        <h2>Basic useState example:</h2>
-        <button onClick={() => counter("count")}>
-          Counter is currently {count}
-        </button>
-        <button onClick={() => counter("clear")}>Clear Count</button>
+      <S.CustomWrapper>
+      <h2>React starter template</h2>
+      <p>Create a border with the "how to" code and link to repo.</p>
+      <p>Just a starter template for react app, read more in the <a>readme.md</a> file, enjoy !</p>
+      </S.CustomWrapper>
       </S.CustomContainer>
     </>
   );

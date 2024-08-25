@@ -37,14 +37,16 @@ export const Nav = styled.nav`
 export const Link = styled(RouterLink)`
   text-decoration: none;
   font-weight: bold;
+  text-transform: uppercase;
   padding: 0.2rem 0.3rem;
   border: 0.2rem solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.15rem;
   color: ${({theme}) => (theme ? theme.subtitles : v.defaultMode.subtitles)};
   background: ${({theme}) => (theme ? theme.secondary : v.defaultMode.secondary)};
 
   &:hover {
-    text-decoration: underline;
+    background-color: ${({theme}) => (theme ? theme.title : v.defaultMode.title)};
+    color: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
   }
 `;
 
