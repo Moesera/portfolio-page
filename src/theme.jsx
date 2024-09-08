@@ -29,6 +29,9 @@ const theme = {
   },
 };
 
+// Box-shadow-light, primary-dark: RGB(40, 39, 51) // dark color (background - primary dark);
+
+
 const currentTheme = theme[mode];
 
 const toggleTheme = () => {
