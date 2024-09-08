@@ -15,6 +15,8 @@ export const App = styled.div`
 `;
 
 export const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
   background: ${({theme}) => (theme ? theme.primary : v.defaultMode.primary)};
   ${v.transitions.page}
 `;
@@ -63,32 +65,74 @@ export const Logo = styled.span`
   text-transform: uppercase;
 `;
 
+/**
+ * I need to crteate a container for the theme button, add a transition and use content inside the button to change the emoji on click.
+ * I it needs to slowly transition to a sun while moving, and a moon while moving back.
+ * Is this achievable with css, is it possible to use this with an icon or SVG.. I want to create a beutifull theme button myself for everyone else to use.
+ * Time consuming, but fun.
+ */
+
+// Step 1: create a container to hold the button transition and contents
+// Step 2: create f.eks the sun and its background.
+// Step 3: create the moon and its background.
+// Step 4: create the transition effect on click.
+
+export const ThemeButton = styled.button`
+cursor: pointer;
+background: ${({theme}) => (theme ? theme.secondary : v.defaultMode.secondary)};
+border: 0.2rem solid transparent;
+box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+border-radius: 100%;
+padding: 1rem;
+
+&::before {
+  content: "🌙";
+  width: 100%;
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease, content 0.3s ease;
+}
+
+&:hover::before {
+    content: "☀️"; // Change the emoji on hover
+    transform: rotate(360deg); // Add a rotation effect on hover
+  }
+`;
+
 // COMPONENTS
 
 /**
  * CUSTOM WRAPPER <div>
- * A div with these available properties to adjust:
- * attrs<{$displayType, $flexFlow, $maxWidth, $margin, $direction, $justify, $align, $padding }>
+ * A div with - available properties:
+ * attrs<{$displayType, $flexFlow, $maxWidth, $margin, $padding, $borderRadius, $direction, $justify, $align, $bgColor, $headerColor, $boxShadow }>
  */
 export const CustomWrapper = styled.div`
   display: ${props => props.$displayType || ""};
   flex-flow: ${props => props.$flexFlow || ""};
-  max-width: ${props => props.$maxWidth || ""};
-  margin: ${props => props.$margin || ""};
   justify-content: ${props => props.$justify || ""};
   flex-direction: ${props => props.$direction || ""};
   align-items: ${props => props.$align || ""};
+  max-width: ${props => props.$maxWidth || ""};
+  margin: ${props => props.$margin || ""};
   padding: ${props => props.$padding || ""};
+  border-radius: ${props => props.$borderRadius || ""};
+  background: ${props => props.$bgColor || ""};
+  box-shadow: ${props => props.$boxShadow || ""};
+
+  & h2 {
+    color: ${props => props.$headerColor || ""};
+  }
 `;
 
 /**
  * CUSTOM CONTAINER <section>
  * A section with these available properties to adjust:
- * attrs<{ $maxWidth, $margin, $direction, $justify, $align, $padding }>
+ * attrs<{ $maxWidth, $minWidth, $margin, $direction, $justify, $align, $padding }>
  */
 export const CustomContainer = styled.section`
   display: flex;
   max-width: ${props => props.$maxWidth || ""};
+  min-width: ${props => props.$minWidth || ""};
   margin: ${props => props.$margin || ""};
   flex-direction: ${props => props.$direction || ""};
   justify-content: ${props => props.$justify || ""};
