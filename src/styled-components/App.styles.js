@@ -65,6 +65,18 @@ export const Logo = styled.span`
   text-transform: uppercase;
 `;
 
+export const SkillIcon = styled.img`
+  color: ${({theme}) => (theme ? theme.subtitles : v.defaultMode.subtitles)};
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
 /**
  * I need to crteate a container for the theme button, add a transition and use content inside the button to change the emoji on click.
  * I it needs to slowly transition to a sun while moving, and a moon while moving back.
@@ -127,14 +139,16 @@ export const CustomWrapper = styled.div`
 /**
  * CUSTOM CONTAINER <section>
  * A section with these available properties to adjust:
- * attrs<{ $maxWidth, $minWidth, $margin, $direction, $justify, $align, $padding }>
+ * attrs<{ $maxWidth, $minWidth, $margin, $direction, $flexWrap, $justify, $align, $padding}>
  */
 export const CustomContainer = styled.section`
   display: flex;
+  background-color: aliceblue;
   max-width: ${props => props.$maxWidth || ""};
   min-width: ${props => props.$minWidth || ""};
   margin: ${props => props.$margin || ""};
   flex-direction: ${props => props.$direction || ""};
+  flex-wrap: ${props => props.$flexWrap || ""};
   justify-content: ${props => props.$justify || ""};
   align-items: ${props => props.$align || ""};
   padding: ${props => props.$padding || ""};

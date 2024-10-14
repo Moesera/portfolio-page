@@ -3,15 +3,15 @@ import { useState } from "react";
 import * as S from "../../styled-components/App.styles";
 
 const Templates = () => {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  const counter = (prop) => {
-    if (prop === "clear") {
-      return setCount(0);
-    }
+  // const counter = (prop) => {
+  //   if (prop === "clear") {
+  //     return setCount(0);
+  //   }
 
-    return setCount(count + 1);
-  };
+  //   return setCount(count + 1);
+  // };
 
   return (
     <>
