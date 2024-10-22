@@ -13,8 +13,9 @@ page: 'transition: all 0.25s ease',
 };
 
 // Screen size breakpoints
-export const screenSize = {
-dekstop: '1440px',
-tablet: '768px',
-mobile: '425px',
+export const screen = {
+  mobile: '425px',
+  tablet: '768px',
+  desktop: '992px',
+  largeDesktop: '1200px',
 };

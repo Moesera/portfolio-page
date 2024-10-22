@@ -27,12 +27,21 @@ const theme = {
     subtitles: "var(--color-subtitles-dark)",
     icons: "var(--color-icons-dark)", 
   },
+  screen: {
+    mobile: '425px',
+    tablet: '768px',
+    desktop: '992px',
+    largeDesktop: '1200px',
+  },
 };
 
 // Box-shadow-light, primary-dark: RGB(40, 39, 51) // dark color (background - primary dark);
 
 
-const currentTheme = theme[mode];
+const currentTheme = {
+  ...theme[mode],
+  screen: theme.screen,
+};
 
 const toggleTheme = () => {
   setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));

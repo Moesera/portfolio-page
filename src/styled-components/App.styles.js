@@ -25,15 +25,16 @@ export const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  ul {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    padding: 0;
-    li {
-      list-style: none;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0;
+      flex-wrap: wrap;
+      li {
+        list-style: none;
+      }
     }
-  }
 `;
 
 export const Link = styled(RouterLink)`
@@ -142,15 +143,14 @@ export const CustomWrapper = styled.div`
  * attrs<{ $maxWidth, $minWidth, $margin, $direction, $flexWrap, $justify, $align, $padding}>
  */
 export const CustomContainer = styled.section`
-  display: flex;
-  background-color: aliceblue;
-  max-width: ${props => props.$maxWidth || ""};
-  min-width: ${props => props.$minWidth || ""};
-  margin: ${props => props.$margin || ""};
+  display: ${props => props.$displayType || ""};
   flex-direction: ${props => props.$direction || ""};
   flex-wrap: ${props => props.$flexWrap || ""};
   justify-content: ${props => props.$justify || ""};
   align-items: ${props => props.$align || ""};
+  max-width: ${props => props.$maxWidth || ""};
+  min-width: ${props => props.$minWidth || ""};
+  margin: ${props => props.$margin || ""};
   padding: ${props => props.$padding || ""};
 `;
 
